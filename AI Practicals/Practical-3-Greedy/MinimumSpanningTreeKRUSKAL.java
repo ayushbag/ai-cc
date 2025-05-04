@@ -17,7 +17,7 @@ class Edge implements Comparable<Edge> {
     }
 }
 
-public class MinimumSpanningTree {
+public class MinimumSpanningTreeKRUSKAL {
     static class DisjointSet {
         int[] parent;
         int[] rank;
