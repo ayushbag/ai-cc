@@ -1,28 +1,29 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void dfs(int adj_mat[10][10],int n,int node,int visited[10])
-{
-	cout<<"DFS"<<endl;
+void dfs(int adj_mat[10][10], int n, int node, int visited[10]) {
+	cout << "DFS" << endl;
 
 	stack<int> stk;
 	stk.push(node);
-	visited[node] = 1;
 
-	while(!stk.empty()){
+	while (!stk.empty()) {
 		int i = stk.top();
 		stk.pop();
-		cout<<i<<"-->";
-		for(int j=n-1;j>=0;j--){
-			if(adj_mat[i][j]==1 && visited[j]!=1){
-				stk.push(j);
-				visited[j] = 1;
+
+		if (!visited[i]) {
+			visited[i] = 1;
+			cout << i << "-->";
+			for (int j = 0; j < n; j++) {
+				if (adj_mat[i][j] == 1 && !visited[j]) {
+					stk.push(j);
+				}
 			}
 		}
 	}
-	cout<<"NULL"<<endl;
-
+	cout << "NULL" << endl;
 }
+
 
 void bfs(int adj_mat[10][10],int n,int node,int visited[10])
 {
