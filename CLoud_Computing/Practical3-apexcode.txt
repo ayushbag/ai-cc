@@ -1,0 +1,19 @@
+1. Login to salesforce account 
+2. go to setup menu: gear icon top right
+3. go to developer console
+4. file > new > apex class > give name:"Test"
+5. write this code: 
+public class Test {
+    public static void sayHello() {
+        System.debug('Hello from Apex!');
+    }
+}
+
+6. After that click debug > open execute anonymous window > Enter apex code window appears!
+code: 
+Test.sayHello();
+
+7.keep open log selected
+8.click execute
+
+
